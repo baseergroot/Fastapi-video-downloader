@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-interface GetInfo {
+export interface GetInfo {
   originalUrl?: string
   video_url?: string
   title?: string

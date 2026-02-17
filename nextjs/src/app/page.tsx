@@ -1,11 +1,14 @@
 "use client";
 
-import getInfo from "@/actions/getInfo";
+import getInfo, { GetInfo } from "@/actions/getInfo";
 import { useActionState, useState } from "react";
 
+const initailState: GetInfo = {
+  success: false
+}
 export default function Home() {
   const [url, setUrl] = useState("");
-  const [state, formAction, isPending] = useActionState(getInfo, null);
+  const [state, formAction, isPending] = useActionState(getInfo, initailState);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[var(--background)] px-6 py-10 text-[var(--foreground)]">
